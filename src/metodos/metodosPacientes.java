@@ -81,7 +81,10 @@ public class metodosPacientes  {
         lista.get(id1).setNombre(nombre);
         
     }
-    
+    public void Eliminar(ArrayList<Paciente>lista,int id1){
+        lista.remove(id1);
+        
+    }
     
      public String imprimirListaNombre(ArrayList<Paciente>lista, String nombre){
         String result ="";

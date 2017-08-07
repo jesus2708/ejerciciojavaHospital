@@ -1,13 +1,13 @@
 package hospital;
 public class HistorialClinico {
     
-    private String codigo;
+    private int codigo;
     private String fecha;
     private int idPaciente;
     private int idMedico;
     private String observaciones;
 
-    public HistorialClinico(String codigo, String fecha, int idPaciente, int idMedico, String observaciones) {
+    public HistorialClinico(int codigo, String fecha, int idPaciente, int idMedico, String observaciones) {
         this.codigo = codigo;
         this.fecha = fecha;
         this.idPaciente = idPaciente;
@@ -15,11 +15,11 @@ public class HistorialClinico {
         this.observaciones = observaciones;
     }
 
-    public String getCodigo() {
+    public int getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(String codigo) {
+    public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
 
@@ -54,9 +54,14 @@ public class HistorialClinico {
     public void setObservaciones(String observaciones) {
         this.observaciones = observaciones;
     }
-        
-    
-    
+
+    @Override
+    public String toString() {
+//        String cadena = "";
+//        cadena = String.format("%s %s", cadena, cadena);
+        return "HistorialClinico\n" + "Codigo=" + codigo + "\nFecha=" + fecha + "\nidPaciente=" + idPaciente + "\nidMedico=" + idMedico + "\nObservaciones=" + observaciones ;
+    }
+
     
     
 }
